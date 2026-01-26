@@ -1,1 +1,1 @@
-# Classification Methods on SpaceNet-7 Satellite Imagery
+# Classification Methods on Satellite Imagery
