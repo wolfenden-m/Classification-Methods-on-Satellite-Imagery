@@ -71,12 +71,13 @@ To reproduce:
    to your `.../SN7_buildings_train/train` folder.
 
 Expected structure per AOI:
+```
 train/
 └── L15-<AOI_ID>/
 ├── images/            # raw monthly GeoTIFFs
 ├── images_masked/     # masked monthly GeoTIFFs
 └── labels/            # per-timestamp GeoJSON building footprints
-
+```
 ## Setup
 
 ```bash
@@ -91,11 +92,11 @@ Then open `notebooks/Final_Code.ipynb` and update `BASE_DIR` to point at your
 local copy of the dataset.
 
 ## Repo Structure
-
+```
 ├── notebooks/Final_Code.ipynb   # full analysis pipeline
 ├── reports/                     # final paper + slide deck (PDF)
 └── figures/                     # exported plots referenced in the paper
-
+```
 ## Limitations & Future Work
 
 - RGB-only imagery limits access to vegetation/spectral indices (e.g. NDVI)
