@@ -71,3 +71,43 @@ To reproduce:
    to your `.../SN7_buildings_train/train` folder.
 
 Expected structure per AOI:
+train/
+└── L15-<AOI_ID>/
+├── images/            # raw monthly GeoTIFFs
+├── images_masked/     # masked monthly GeoTIFFs
+└── labels/            # per-timestamp GeoJSON building footprints
+
+## Setup
+
+```bash
+git clone https://github.com/<your-username>/spacenet7-classification.git
+cd spacenet7-classification
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Then open `notebooks/Final_Code.ipynb` and update `BASE_DIR` to point at your
+local copy of the dataset.
+
+## Repo Structure
+
+├── notebooks/Final_Code.ipynb   # full analysis pipeline
+├── reports/                     # final paper + slide deck (PDF)
+└── figures/                     # exported plots referenced in the paper
+
+## Limitations & Future Work
+
+- RGB-only imagery limits access to vegetation/spectral indices (e.g. NDVI)
+- Two-year temporal coverage and global AOI diversity limit seasonal
+  inference for non-temperate biomes
+- No ground truth for land-use segmentation categories
+- Future directions: longer temporal archives, biome-aware latent models,
+  transfer learning across AOIs, and supervised sector segmentation with
+  manually drawn masks
+
+## References
+
+- Van Etten, A. *The SpaceNet 7 Multi-Temporal Urban Development Challenge:
+  Dataset Release.*
+- MathWorks. *ResNet-18 Convolutional Neural Network.*
