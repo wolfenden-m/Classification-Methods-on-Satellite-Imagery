@@ -1,0 +1,17 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+scikit-image
+scipy
+xgboost
+shap
+hmmlearn
+rasterio
+geopandas
+torch
+torchvision
+Pillow
+prophet
+statsmodels
+tqdm
